@@ -12,6 +12,11 @@ public class S4L1BeApplication {
 
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(S4L1BeApplication.class);
-        System.out.println();
+
+        System.out.println(ctx.getBean("Margherita"));
+        System.out.println(ctx.getBean("Hawaiana"));
+
+        ctx.close();
     }
+
 }

@@ -16,12 +16,6 @@ public class Pizza {
     private List<String> toppings;
 
 
-    public Pizza(String nome, double prezzo, int calorie) {
-        this.nome = nome;
-        this.prezzo = prezzo;
-        this.calorie = calorie;
-    }
-
     public Pizza(String nome, double prezzo, int calorie, List<String> toppings) {
         this.nome = nome;
         this.prezzo = prezzo;
@@ -29,13 +23,50 @@ public class Pizza {
         this.toppings = toppings;
     }
 
+    public Pizza() {
+
+    }
+
 
     @Override
     public String toString() {
         return "Pizza{" +
-                "nome='" + nome + '\'' +
-                ", prezzo=" + prezzo +
-                ", calorie=" + calorie +
-                '}';
+                "nome= " + nome + '\'' +
+                ", prezzo= " + prezzo +
+                ", calorie= " +calorie + " ingredienti= "+  toppings +
+        ' ';
+    }
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPrezzo() {
+        return prezzo;
+    }
+
+    public void setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public int getCalorie() {
+        return calorie;
+    }
+
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
+    }
+
+    public List<String> getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(List<String> toppings) {
+        this.toppings = toppings;
     }
 }
